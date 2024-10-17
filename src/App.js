@@ -44,51 +44,10 @@ function App() {
         setTo(temp);
     }
 
-    // Star animation functions
-    useEffect(() => {
-        for (let i = 0; i < 15; i++) {
-            setTimeout(createStar, i * 2000); // Add delay between stars
-        }
-    }, []);
-
-    function createStar() {
-        const starsContainer = document.querySelector('.stars');
-        const star = document.createElement('div');
-        star.classList.add('star');
-
-        // Set initial position in the top right corner
-        star.style.left = '100vw'; // Starting position on the right
-        star.style.top =  Math.random() * 100 + 'vh'; // Random height
-
-        // Add star to the container
-        starsContainer.appendChild(star);
-
-        // Animate the star
-        animateStar(star);
-    }
-
-    function animateStar(star) {
-        const duration = Math.random() * 10 + 5; // Random duration (5-15 seconds)
-
-        star.animate([
-            { transform: 'translate(0, 0)' }, // Starting position
-            { transform: `translate(-100vw, 100vh)` } // Move left and down
-        ], {
-            duration: duration * 1000,
-            easing: 'linear', // Linear motion
-            iterations: 5 // Only move once
-        });
-
-        // Remove star after animation
-        star.addEventListener('finish', () => {
-            star.remove(); // Remove the star after the animation
-        });
-    }
+    
 
     return (
         <div className="App">
-            <div className="stars"></div>
-
             <div className="heading">
                 <h1>Currency Converter</h1>
             </div>
@@ -97,33 +56,29 @@ function App() {
                 <span className="dollar-icon">$</span>
                 <input type="text" id="amount"/>
                 <label htmlFor="amount" className="input-label">Amount</label>
-                </div>
-                <div className="currency-input">
-      <Dropdown
-        options={options}
-        onChange={(e) => { setFrom(e.value); }}
-        value={from}
-        className="custom-dropdown"
-      />
-    </div>
-              <div className="switch">
-                    <HiSwitchHorizontal size="30px" onClick={flip} />
-                </div>
-                <div className="currency-input2">
-      <Dropdown
-        options={options}
-        onChange={(e) => { setFrom(e.value); }}
-        value={to}
-        className="custom-dropdown2"
-      />
-      </div>
-                <div className="button-container">
-                    <button onClick={convert}>Convert</button>
-                </div>
             </div>
-            <div className="result">
-                <h2>Converted Amount:</h2>
-                <p>{`${input} ${from} = ${output.toFixed(2)} ${to}`}</p>
+            <div className="currency-input">
+                <Dropdown
+                options={options}
+                onChange={(e) => { setFrom(e.value); }}
+                value={from}
+                className="custom-dropdown"
+                />
+            </div>
+            <div className="switch">
+                    <HiSwitchHorizontal size="30px" onClick={flip} />
+            </div>
+            <div className="currency-input2">
+                <Dropdown
+                options={options}
+                onChange={(e) => { setFrom(e.value); }}
+                value={to}
+                className="custom-dropdown2"
+                />
+            </div>
+            <div className="button-container">
+                <button onClick={convert}>Convert</button>
+            </div>
             </div>
         </div>
     );
