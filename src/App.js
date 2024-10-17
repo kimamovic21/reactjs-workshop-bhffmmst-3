@@ -93,35 +93,30 @@ function App() {
                 <h1>Currency Converter</h1>
             </div>
             <div className="container">
-                <div className="currency-input">
-                    <h3>Amount</h3>
-                    <input
-                        type="text"
-                        placeholder="Enter the amount"
-                        onChange={(e) => setInput(e.target.value)}
-                    />
+                <div className="input-container">
+                <span className="dollar-icon">$</span>
+                <input type="text" id="amount"/>
+                <label htmlFor="amount" className="input-label">Amount</label>
                 </div>
                 <div className="currency-input">
-                    <h3>From</h3>
-                    <Dropdown
-                        options={options}
-                        onChange={(e) => { setFrom(e.value) }}
-                        value={from}
-                        placeholder="From"
-                    />
-                </div>
-                <div className="switch">
+      <Dropdown
+        options={options}
+        onChange={(e) => { setFrom(e.value); }}
+        value={from}
+        className="custom-dropdown"
+      />
+    </div>
+              <div className="switch">
                     <HiSwitchHorizontal size="30px" onClick={flip} />
                 </div>
-                <div className="currency-input">
-                    <h3>To</h3>
-                    <Dropdown
-                        options={options}
-                        onChange={(e) => { setTo(e.value) }}
-                        value={to}
-                        placeholder="To"
-                    />
-                </div>
+                <div className="currency-input2">
+      <Dropdown
+        options={options}
+        onChange={(e) => { setFrom(e.value); }}
+        value={to}
+        className="custom-dropdown2"
+      />
+      </div>
                 <div className="button-container">
                     <button onClick={convert}>Convert</button>
                 </div>
