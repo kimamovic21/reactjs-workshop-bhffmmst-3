@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: 'Helvetica, Arial, sans-serif'; 
+    font-family: Monospace; 
     margin: 0; 
     padding: 0; 
     justify-content: center; 
@@ -71,7 +71,7 @@ font-family: "Cairo";
     font-size: 17px; 
     color: #000000; 
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
   }
   input {
     width: 220px; 
@@ -82,7 +82,7 @@ font-family: "Cairo";
     border-radius: 5px; 
     font-size: 15px; 
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
     font-weight: bold;
   }
   
@@ -93,7 +93,7 @@ font-family: "Cairo";
     font-size: 12px;
     color: #999;
     pointer-events: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
   }
 
   .currency-input, .currency-input2 {
@@ -122,7 +122,7 @@ font-family: "Cairo";
     font-size: 12px;
     pointer-events: none; 
     z-index: 1;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
   }
 
   .custom-dropdown2::before{
@@ -134,7 +134,7 @@ font-family: "Cairo";
     font-size: 12px;
     pointer-events: none; 
     z-index: 1;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
   }
   
 
@@ -187,7 +187,8 @@ button {
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Monospace;
+    font-size: 15px;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
@@ -235,5 +236,7 @@ button:hover {
 
 
 p {
-    font-size: 30px;
+    font-size: 25px;
+    font-family: Monospace;
+    text-align: center;
 }
