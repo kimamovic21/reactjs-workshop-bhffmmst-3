@@ -271,9 +271,9 @@ p {
     border-radius: 8px; 
     padding: 20px; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    margin: 20px 10px; /* Gornja margina, leva i desna margina */
+    margin: 20px 10px;
     transition: background-color 0.3s ease; 
-    width: calc(100% - 20px); /* Oduzmi margine od ukupne širine */
+    width: calc(100% - 20px); 
     max-width: 750px; 
 
 }
@@ -304,13 +304,13 @@ p {
 
 .live-rates li:nth-child(3n + 1){
     background-color: #ffeb80;
-} /* 1, 4, 7, ... */
-.live-rates li:nth-child(3n) { /* 2, 5, 8, ... */
+}
+.live-rates li:nth-child(3n) {
     background-color: #806C00;
-    color: black; /* Boja za 1. i 2. */
+    color: black; 
 }
 
-.live-rates li:nth-child(3n+2) { /* 3, 6, 9, ... */
-    background-color: #ffd700; /* Boja za 3. */
+.live-rates li:nth-child(3n+2) { 
+    background-color: #ffd700; 
 }
 
