@@ -1,4 +1,3 @@
-/* General App Styling */
 .App {
     font-family: 'Arial', sans-serif;
     margin: 0 auto;
@@ -8,13 +7,18 @@
     max-width: 1800px;
 }
 
+
 h1, h2 {
-    margin-top: 120px;
+    margin-top: 80px;
     text-align: center;
     margin-bottom: 20px;
     font-size: 70px;
     color: black;
+    word-wrap: break-word; 
+    line-height: 1.1; 
+    overflow-wrap: break-word;
 }
+
 .converter-caption {
     font-size: 16px;
     color: #555; 
@@ -22,14 +26,15 @@ h1, h2 {
     margin-bottom: 1.5rem; 
     text-align: center; 
     line-height: 1.5;
+    padding: 0 20px; 
 }
-
 
 /* Input and Dropdown Styling */
 .input-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap; 
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -38,7 +43,7 @@ input {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px;
+    width: 180px;
 }
 
 button {
@@ -49,20 +54,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #d356c2;
+    transform: scale(1.05); 
 }
 
 .custom-dropdown {
     width: 120px;
     font-size: 14px;
+    text-align: center;
 }
 
 /* Table Styling */
 .table-section {
     margin-top: 30px;
+    padding: 0 10px; 
 }
 
 table {
@@ -76,13 +85,13 @@ table th, table td {
     padding: 12px;
     text-align: center;
     font-size: 14px;
-    border: none; 
 }
 
 table th {
     background-color: #511e92;
     color: white;
     text-transform: uppercase;
+    word-wrap: break-word; 
 }
 
 table tr:nth-child(even) {
@@ -106,26 +115,73 @@ table tr:hover {
     display: flex;
     align-items: center;
     gap: 10px; 
+    justify-content: center;
 }
 
 .currency-flag {
-    width: 20px;  
-    height: 20px;
+    width: 25px;  
+    height: 25px;
     border-radius: 50%; 
     object-fit: cover; 
     margin-right: 5px;
 }
 
-.dropdown-item {
-    display: flex;
-    align-items: center;
+
+@media screen and (max-width: 768px) {
+    .App {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 50px; 
+        margin-top: 50px;
+    }
+
+    .converter-caption {
+        font-size: 14px;
+        margin: 10px 0;
+        padding: 0 10px; 
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    input, .custom-dropdown, button {
+        width: 90%; 
+        max-width: 300px;
+    }
+
+    table {
+        display: block; 
+        overflow-x: auto;
+        font-size: 12px;
+    }
+
+    .currency-flag {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.custom-control {
-    display: flex;
-    align-items: center;
-}
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px; 
+    }
 
-.custom-arrow {
-    color: #333;
+    .converter-caption {
+        font-size: 12px;
+    }
+
+    input, button, .custom-dropdown {
+        width: 100%; 
+    }
+
+    table th, table td {
+        font-size: 11px;
+        padding: 8px;
+    }
 }
