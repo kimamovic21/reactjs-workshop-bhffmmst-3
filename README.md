@@ -4,6 +4,8 @@
 
 The Currency Converter App is a dynamic web application designed to convert between currencies in real time. Built using React.js, it leverages ExchangeRate-API to fetch up-to-date exchange rates and provides additional insights, such as buying, selling, high, low, and percentage change values. The app features an interactive currency conversion tool, a dynamic table with updated currency information, and a ticker tape at the top for real-time updates.
 
+![Readme](https://github.com/user-attachments/assets/535ce0d9-621c-437c-ac46-83e13cb8d3f8)
+
 The application is deployed at: [Currency Converter App](https://currenncy-converter.netlify.app/)
 
 
