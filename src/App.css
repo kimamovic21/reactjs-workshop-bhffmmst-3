@@ -1,333 +1,131 @@
-/* App.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Cairo');
-
-
+/* General App Styling */
 .App {
-    min-height: 100vh; 
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: Monospace; 
-    margin: 0; 
-    padding: 0; 
-    justify-content: center; 
-    background-image: url('./images/pixelcut-export (1).jpeg'), radial-gradient(ellipse at bottom, #000000 0%, #0c0d13 100%); 
-    background-size: cover, cover; 
-    background-repeat: no-repeat, no-repeat; 
-    background-position: center, top; 
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 1800px;
 }
 
-.heading {
-    font-family: "Cairo";
+h1, h2 {
+    margin-top: 120px;
     text-align: center;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30vh;
-    letter-spacing: 1px;
-    line-height:1;
-    background-image: url(https://media.giphy.com/media/l4FGnZ5NlHuvHfthm/giphy.gif?cid=790b7611xlodjiwnx79ybzps81fm3ox6emot65r7rizmiz70&ep=v1_gifs_search&rid=giphy.gif&ct=g);
-    background-size: cover;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    text-transform: uppercase;
-    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    font-size: 70px;
+    color: black;
+}
+.converter-caption {
+    font-size: 16px;
+    color: #555; 
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem; 
+    text-align: center; 
+    line-height: 1.5;
 }
 
-.container {
-    background: white; 
-    border-radius: 15px; 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
-    padding: 30px;
-    width: 90%;
-    max-width: 750px; 
-    position: relative;
-    z-index: 2;
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    flex-wrap: wrap; 
+
+/* Input and Dropdown Styling */
+.input-container {
+    display: flex;
+    justify-content: center;
     gap: 10px;
-    margin-left: 20px;
     margin-bottom: 20px;
 }
 
-.input-container {
-    position: relative; 
-    margin: 0; 
-}
-
-.dollar-icon {
-    position: absolute; 
-    left: 10px; 
-    top: 57%;
-    transform: translateY(-50%);
-    font-size: 1.1rem; 
-    color: #000000; 
-    font-family: monospace;
-}
-
 input {
-    width: 100%;  
-    max-width: 220px; 
-    height: 50px; 
-    padding-left: 20px;
-    padding-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px; 
-    font-size: 1rem; 
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
-    font-family: monospace;
-}
-
-.input-label {
-    position: absolute;
-    left: 10px; 
-    top: 10px;
-    font-size: 0.75rem;
-    color: #999;
-    pointer-events: none;
-    font-family: monospace;
-}
-
-.currency-input, .currency-input2 {
-    position: relative;
-    width: 100%;
-    max-width: 220px; 
-    margin: 0;
-}
-
-.custom-dropdown, .custom-dropdown2 {
-    width: 100%; 
-    max-width: 220px;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    appearance: none;
-    height: 40px;
-    padding-top: 20px;
+    width: 150px;
 }
 
-.custom-dropdown::before {
-    content: 'From';
-    position: absolute;
-    top: 5px; 
-    left: 10px; 
-    color: #999;
-    font-size: 0.75rem;
-    pointer-events: none; 
-    z-index: 1;
-    font-family: Futura;
+button {
+    padding: 10px 20px;
+    background-color: #561a79;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.custom-dropdown2::before{
-    content: 'To';
-    position: absolute;
-    top: 5px; 
-    left: 10px; 
-    color: #999;
-    font-size: 0.75rem;
-    pointer-events: none; 
-    z-index: 1;
-    font-family: Futura;
+button:hover {
+    background-color: #d356c2;
 }
 
-.custom-dropdown .Dropdown-placeholder,
-.custom-dropdown .Dropdown-control, .custom-dropdown2 .Dropdown-placeholder, .custom-dropdown2 .Dropdown-control {
-    position: relative;
+.custom-dropdown {
+    width: 120px;
+    font-size: 14px;
 }
 
-.custom-dropdown .Dropdown-control, .custom-dropdown2 .Dropdown-control {
+/* Table Styling */
+.table-section {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
     border: none; 
-    box-shadow: none; 
 }
 
-.custom-dropdown .Dropdown-menu, .custom-dropdown2 .Dropdown-menu {
-    border: none; 
-    box-shadow: none; 
+table th {
+    background-color: #511e92;
+    color: white;
+    text-transform: uppercase;
 }
 
-.custom-dropdown .Dropdown-control:not(:empty) + .custom-dropdown::before, 
-.custom-dropdown2 .Dropdown-control:not(:empty) + .custom-dropdown2::before {
-    display: none;
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.input-container,.currency-input,.switch,.currency-input2{
-    margin: 0;
-    padding: 0;
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Output Container */
+.output-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.currency-name {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.currency-flag {
+    width: 20px;  
+    height: 20px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 5px;
+}
+
+.dropdown-item {
     display: flex;
     align-items: center;
 }
 
-.switch {
-    cursor: pointer;
+.custom-control {
+    display: flex;
+    align-items: center;
 }
 
-.result {
-    box-sizing: border-box;
-    width: 100%; 
-    max-width: 800px;
-    padding-left: 30px;
-}
-
-.button-container {
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    margin-top: 20px;
-}
-
-button {
-    background-image: linear-gradient(to right, #BA8B02 0%, #614b4b 51%, #BA8B02 100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Monospace;
-    font-size: 1rem;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    border-color: transparent;
-    display: block;
-}
-
-button:hover {
-    background-position: right center; 
-    color: #fff;
-    text-decoration: none;
-}
-
-
-@media (max-width: 768px) {
-    .heading {
-        font-size: 2rem; 
-    }
-
-    .container {
-        width: 80%;
-        padding: 20px;
-        margin-left: 20px;
-    }
-
-    button {
-        font-size: 0.9rem; 
-        padding: 10px 25px;
-    }
-
-    .result {
-        width: 100%; 
-    }
-    .live-rates {
-        margin: 10px; 
-        padding: 15px;
-        width: 100%; 
-        max-width: 750px; 
-        box-sizing: border-box; 
-    }
-
-}
-
-
-@media (max-width: 480px) {
-    .heading {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    button {
-        padding: 8px 20px;
-        font-size: 0.8rem;
-    }
-    
-}
-
-p {
-    font-size: 1.5rem;
-    font-family: Monospace;
-    text-align: center;
-}
-
-.converter {
-    position: relative;
-    z-index: 10;
-}
-
-.live-rates {
-    background-color: #f9f9f9;
-    border-radius: 15px; 
-    padding: 30px;
-    box-shadow: 0 8px 30px rgba(150, 135, 7, 0.856); 
-    width: 90%; 
-    max-width: 750px; 
-    margin: 20px auto; 
-    font-family: 'Arial', sans-serif;
+.custom-arrow {
     color: #333;
 }
-
-/* Title styling */
-.live-rates h2 {
-    font-size: 1.5rem;
-    color: rgb(97, 85, 8);
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* List styling */
-.live-rates ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Individual list items */
-.live-rates li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effects for list items */
-.live-rates li:hover {
-    background-color: rgb(189, 164, 1);
-    transform: translateY(-2px);
-}
-
-/* Alternate background for every other item */
-.live-rates li:nth-child(even) {
-    background-color: #f3f3f3;
-}
-
-/* Add spacing between list items */
-.live-rates li + li {
-    margin-top: 10px;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-    .live-rates {
-        max-width: 90%;
-    }
-
-    .live-rates h2 {
-        font-size: 1.25rem;
-    }
-
-    .live-rates li {
-        font-size: 0.9rem;
-    }
-}
-
