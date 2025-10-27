@@ -2,6 +2,10 @@
 
 A simple React application that displays real-time cryptocurrency prices using the CoinGecko API.
 
+## 📸 Screenshot
+
+![Crypto Currencies App](./public/crypto-currencies.png)
+
 ## 📋 Features
 
 - ✅ Display top 10 cryptocurrencies by market cap
